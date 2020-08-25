@@ -63,10 +63,10 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(originalFlavors, newFlavor){
     originalFlavors.unshift(newFlavor);
-    console.log(originalFlavors);
+    console.log(originalFlavors)
 }
 
-console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
+addFlavor(originalFlavors, "Rainbow Sherbert");
 
 
 
