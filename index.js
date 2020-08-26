@@ -48,6 +48,7 @@ function is31Flavors(originalFlavors){
         return false;
     }
 }
+
 console.log(is31Flavors(originalFlavors));
 
 
@@ -111,7 +112,7 @@ Your function should remove a flavor from the end of the array and console.log t
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
 function removeLastFlavor(originalFlavors){
-    originalFlavors.shift();
+    originalFlavors.pop();
     console.log(originalFlavors);
 }
 removeLastFlavor(originalFlavors);
@@ -140,7 +141,7 @@ function getFlavorByIndex(originalFlavors, location){
     console.log(originalFlavors[location]);
 }
 getFlavorByIndex(originalFlavors, 3);
-
+//3 is Burgundy Cherry
 
 
 
@@ -162,18 +163,19 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 Hint: You can use .splice() for this
 
 */
-function removeFlavorByName(originalFlavors, removeFlavor){
-    for ( i = 0; i < originalFlavors.length ; i++){
-        if (originalFlavors.includes(removeFlavor,i)){
-            originalFlavors.splice(i,0);
+
+function removeFlavorByName(removeTarget, removeFlavor){
+    for ( let i = 0; i < removeTarget.length ; i++){
+        if (removeTarget[i] === removeFlavor){
+            removeTarget.splice(i,1);
         }
-        else{
-            
         }
-    
+        return removeTarget;
     }
-}
-//removeFlavorByName(originalFlavors, "Peppermint");
+
+console.log(removeFlavorByName(originalFlavors, 'Vanilla'));
+
+
 
 
 
@@ -187,11 +189,15 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(originalFlavors){
-    let copyList = [...originalFlavors];
-    console.log(copyList);
+
+function copy (copyTarget){
+    let newArray = [...copyTarget];
+    console.log(newArray);
 }
 copy(originalFlavors);
+
+
+
 
 
 
@@ -219,15 +225,26 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
 
-    /*code here*/
 
+function filterByWord(checkList, flavor){
+    for (let i=0; i<checkList.length ; i++){
+        if (checkList.include())
+    }
 }
+filterByWord(originalFlavors, "Chocolate")
 
 
+function removeFlavorByName(removeTarget, removeFlavor){
+    for ( let i = 0; i < removeTarget.length ; i++){
+        if (removeTarget[i] === removeFlavor){
+            removeTarget.splice(i,1);
+        }
+        }
+        return removeTarget;
+    }
 
-
+console.log(removeFlavorByName(originalFlavors, 'Vanilla'));
 
 
 
