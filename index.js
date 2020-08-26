@@ -229,25 +229,12 @@ hint - you can use the .includes method to help you solve this */
 
 function filterByWord(checkList, flavor){
     for (let i=0; i<checkList.length ; i++){
-        if (checkList.include())
+        if (checkList.includes(flavor,i)){
+           chocList.push(checkList[i]); 
+        }
     }
 }
 filterByWord(originalFlavors, "Chocolate")
-
-
-function removeFlavorByName(removeTarget, removeFlavor){
-    for ( let i = 0; i < removeTarget.length ; i++){
-        if (removeTarget[i] === removeFlavor){
-            removeTarget.splice(i,1);
-        }
-        }
-        return removeTarget;
-    }
-
-console.log(removeFlavorByName(originalFlavors, 'Vanilla'));
-
-
-
 
 
 
