@@ -225,16 +225,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-
-
 function filterByWord(checkList, flavor){
-    for (let i=0; i<checkList.length ; i++){
-        if (checkList.includes(flavor,i)){
-           chocList.push(checkList[i]); 
+    for ( let i=0; i < checkList.length ; i++ ){
+        if ( checkList.includes ( flavor , i )){
+           let chocList = chocList.push(checkList[i])
+           return chocList;
         }
+        }
+        return chocList;
     }
-}
-filterByWord(originalFlavors, "Chocolate")
+    
+
+filterByWord(originalFlavors, "Chocolate");
 
 
 
